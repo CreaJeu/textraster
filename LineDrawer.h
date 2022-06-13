@@ -9,7 +9,7 @@
 // usage :
 // struct LineDrawer d;
 // start(&d, ....)
-// while(!hasFinished(&d)
+// while(!hasFinished(&d))
 // {
 // 		... use d._currX, ...
 //		next(&d);
@@ -48,9 +48,9 @@ struct LineDrawer
 	int __steep;//bool
 };
 
-void start(struct LineDrawer* drawer, float yStart, float xStart, float yEnd, float xEnd);
-void next(struct LineDrawer* drawer);
-int hasFinished(struct LineDrawer* drawer);
+void lineDrawerStart(struct LineDrawer* drawer, float yStart, float xStart, float yEnd, float xEnd);
+void lineDrawerNext(struct LineDrawer* drawer);
+int lineDrawerHasFinished(struct LineDrawer* drawer);
 
 #endif // LINE_DRAWER_H
 

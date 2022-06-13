@@ -16,7 +16,7 @@ float xw_rfpart(float w)
 	return 1 - xw_fpart(w);
 }
 
-void start(struct LineDrawer* d, float yStart, float xStart, float yEnd, float xEnd)
+void lineDrawerStart(struct LineDrawer* d, float yStart, float xStart, float yEnd, float xEnd)
 {
 	d->_yStart = yStart;
 	d->_xStart = xStart;
@@ -107,7 +107,7 @@ void start(struct LineDrawer* d, float yStart, float xStart, float yEnd, float x
 	d->__lastDistBis = xw_fpart(floatYend) * xGap;
 }
 
-void next(struct LineDrawer* d)
+void lineDrawerNext(struct LineDrawer* d)
 {
 	d->__xIter++;
 	if(d->__xIter > d->__lastXIter)
@@ -147,7 +147,7 @@ void next(struct LineDrawer* d)
 	}
 }
 
-int hasFinished(struct LineDrawer* d)
+int lineDrawerHasFinished(struct LineDrawer* d)
 {
 	return d->__xIter > d->__lastXIter;
 }
